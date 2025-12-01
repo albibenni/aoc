@@ -1,3 +1,5 @@
+mod advent2025;
+
 fn main() {
-    println!("Hello, world!");
+    println!("Hello, AOC!");
 }
