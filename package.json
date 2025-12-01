@@ -1,0 +1,41 @@
+{
+  "name": "aoc",
+  "authors": [
+    {
+      "name": "Alberto Benatti",
+      "email": "albi.benn8@gmail.com"
+    }
+  ],
+  "version": "1.0.0",
+  "description": "My testing project",
+  "main": ".dist/index.js",
+  "type": "module",
+  "scripts": {
+    "indent:write": "prettier . --write",
+    "test": "vitest run",
+    "build": "tsc -w"
+  },
+  "author": "Alberto Benatti",
+  "license": "ISC",
+  "keywords": [],
+  "devDependencies": {
+    "@eslint/eslintrc": "3.3.1",
+    "@eslint/js": "9.27.0",
+    "@types/node": "22.15.27",
+    "eslint": "9.27.0",
+    "eslint-config-prettier": "10.1.5",
+    "eslint-plugin-prettier": "5.4.1",
+    "globals": "16.2.0",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.48.0",
+    "vitest": "4.0.14"
+  },
+  "engines": {
+    "node": ">=23.8.0"
+  },
+  "engineStrict": true,
+  "dependencies": {
+    "zod": "4.1.13"
+  }
+}
