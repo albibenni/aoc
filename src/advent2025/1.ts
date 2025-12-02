@@ -31,3 +31,27 @@ function solve1() {
 }
 
 solve1();
+
+function solveit() {
+  const currDir = dirname(fileURLToPath(import.meta.url)) + "/data/" + "1p.txt";
+  const splits = fs.readFileSync(currDir, "utf8").trim().split("\n");
+  let dialPosition = 50;
+  let countZerosP2 = 0;
+
+  splits.forEach((move) => {
+    const letterSign = move[0]! === "L" ? -1 : 1;
+    const sub = parseInt(move.slice(1));
+    const newcent = dialPosition + letterSign * sub;
+
+    if (newcent > 99) {
+      countZerosP2 += Math.floor(newcent / 100);
+    } else if (newcent < 0) {
+      if (dialPosition > 0) countZerosP2++;
+      countZerosP2 += Math.floor(Math.abs(newcent) / 100);
+    } else if (newcent === 0) countZerosP2++;
+    dialPosition = mod(dialPosition + letterSign * sub, 100);
+  });
+  console.log(countZerosP2);
+}
+
+solveit();
