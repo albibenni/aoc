@@ -6,6 +6,7 @@ fn main() {
     let three2 = advent2025::three::sol3();
     let (five1, five2) = advent2025::five::sol5();
     let (six1, six2) = advent2025::six::sol6();
+    let (seven1, seven2) = advent2025::seven::sol7();
     println!("Part 1: {}", one);
     println!("Part 2: {}", two);
     println!("day 3");
@@ -16,4 +17,6 @@ fn main() {
 
     println!("Part 1: {}", six1);
     println!("Part 2: {}", six2);
+    println!("Part 1: {}", seven1);
+    println!("Part 2: {}", seven2);
 }
